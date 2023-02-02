@@ -103,18 +103,23 @@ label {
   border: 3px solid white;
 }
 #sectionPlay article {
-  align-items: baseline;
-  justify-content: space-around;
+  grid-template-columns: repeat(3, 33%);
   margin: 5vh 0;
   font-family: Ubuntu;
   display: none;
 }
-#sectionPlay article p {
-  width: 10vw;
-  align-self: center;
+#sectionPlay article div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #sectionPlay article div p {
   margin-bottom: 1vh;
+}
+#sectionPlay article #result {
+  grid-column: 1/4;
+  margin-bottom: 3vh;
 }
 
 #restart {

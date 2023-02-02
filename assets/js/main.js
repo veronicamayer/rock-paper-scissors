@@ -1,5 +1,6 @@
 /* Globale Variablen */
-const resultP = document.querySelector('#result');
+const resultP = document.querySelector('#score');
+const resultText = document.querySelector('#result');
 const counterRounds = document.querySelector('#counterRounds');
 const numberOfRoundsForm = document.getElementById('formRounds');
 const imageYou = document.querySelector('#imageYou');
@@ -20,7 +21,7 @@ const formChoice = document.querySelector('#formChoice').addEventListener("chang
     document.getElementById('hintText').style.display = 'none';
     numberOfRoundsForm.style.display = "none";
     counterRounds.style.display = "block";
-    document.querySelector('article').style.display = "flex";
+    document.querySelector('article').style.display = "grid";
     document.querySelector('#restart').style.display = "block";
 
     userChoice = document.querySelector('input[name="choice"]:checked').value;
@@ -32,6 +33,7 @@ const formChoice = document.querySelector('#formChoice').addEventListener("chang
     document.getElementById('computerChoice').innerHTML = '"' + computerChoice + '"';
 
     const result = getResult(userChoice, computerChoice);
+    resultText.innerHTML = result;
 
     (result === 'You win') ? userScore++ : (result === 'You lose') ? computerScore++ : (result === 'Draw') ? computerScore++ & userScore++ : "";
 
