@@ -1,0 +1,155 @@
+@use "mixins.scss";
+@use "variables.scss";
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/36926wide.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color: white;
+    height: 100vh;
+}
+
+main {
+    width: 40vw;
+    margin: 5vh auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sectionRounds {
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 3vh 5vw;
+    text-align: center;
+    margin-bottom: 3vh;
+
+    p {
+        margin-bottom: 3vh;
+    }
+
+    #counterRounds {
+        display: none;
+        padding: 13.5px 0;
+    }
+
+    input[type="radio"]:checked + label, input[type="radio"]:hover + label {
+        background-color: orange;
+        color: white;
+    }
+
+    label {
+        background-color: white;
+        color: orange;    
+    }
+}
+
+#sectionCounter {
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 2vh 5vw;
+    margin-bottom: 3vh;
+    text-align: center;
+    position: relative;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        position: absolute;
+        background-color: orange;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    p:first-of-type {
+        top: 25%;
+        left: -40px;
+    }
+
+    p:nth-of-type(2) {
+        top: 25%;
+        right: -40px;
+    }
+}
+
+input[type="radio"]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 3vh 0;
+}
+
+label {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 25px;
+    border-radius: 10px;
+}
+
+#sectionPlay {
+    text-align: center;
+    margin: 0 auto;
+
+    input[type="radio"]:checked + label, input[type="radio"]:hover + label {
+        box-shadow: 0px 0px 5px 0px white;
+    }
+    
+    img {
+        width: 50px;
+        margin-bottom: 1vh;
+    }
+
+    label {
+        color: white;
+        border: 3px solid white;
+    }
+
+    article {
+        align-items: baseline;
+        justify-content: space-around;
+        margin: 5vh 0;
+        font-family: Ubuntu;
+        display: none;
+
+        p {
+            width: 10vw;
+            align-self: center;
+        }
+
+        div {
+            p {
+                margin-bottom: 1vh;
+            }
+        }
+    }
+}
+
+#restart {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1vh 3vw;
+    display: none;
+}
+
+
+
+
+
+
+
+
