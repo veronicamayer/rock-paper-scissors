@@ -5,6 +5,7 @@ const counterRounds = document.querySelector('#counterRounds');
 const numberOfRoundsForm = document.getElementById('formRounds');
 const imageYou = document.querySelector('#imageYou');
 const imageCom = document.querySelector('#imageCom');
+const numRounds = document.querySelector('#numRounds');
 
 let computerChoice = "";
 let userChoice = "";
@@ -35,16 +36,16 @@ const formChoice = document.querySelector('#formChoice').addEventListener("chang
     const result = getResult(userChoice, computerChoice);
     resultText.innerHTML = result;
 
-    (result === 'You win') ? userScore++ : (result === 'You lose') ? computerScore++ : (result === 'Draw') ? computerScore++ & userScore++ : "";
+    (result === 'You win') ? userScore++ : (result === 'You lose') ? computerScore++ : (result === 'Draw') ? "" : "";
 
     counterRounds.innerHTML = `${round} out of ${numberOfRounds}`;
-    resultP.innerHTML = `${userScore} : ${computerScore}`;
+    resultP.innerHTML = `${userScore}${computerScore}`;
 
     (round === numberOfRounds) ? displayWinner() : round++;
 });
 
 function displayWinner() {
-    (userScore > computerScore) ? counterRounds.innerHTML = 'You win the game!' : (userScore < computerScore) ? counterRounds.innerHTML = 'Computer wins the game!' : counterRounds.innerHTML = 'The game is a draw!';
+    (userScore > computerScore) ? (counterRounds.innerHTML = 'You win the game!', numRounds.innerHTML = '') : (userScore < computerScore) ? (counterRounds.innerHTML = 'Computer wins the game!', numRounds.innerHTML = '') : (counterRounds.innerHTML = 'The game is a draw!', numRounds.innerHTML = '');
 
     userScore = 0;
     computerScore = 0;

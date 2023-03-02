@@ -14,9 +14,7 @@
 }
 
 body {
-    background-image: url(../img/36926wide.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
+    background-color: #fff8ed;
     color: white;
     height: 100vh;
 }
@@ -24,67 +22,118 @@ body {
 main {
     width: 40vw;
     margin: 5vh auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #05408e;
+
+    h1 {
+        background-color: #fdffff;
+        padding: 10px 40px;
+        border: 1px solid #05408e;
+        border-radius: 30px;
+        font-size: 1.5rem;
+        width: max-content;
+        margin: auto;
+    }
 }
 
 #sectionRounds {
-    border: 3px solid white;
-    border-radius: 5px;
-    padding: 3vh 5vw;
     text-align: center;
-    margin-bottom: 3vh;
 
     p {
-        margin-bottom: 3vh;
+        margin: 25px;
+        text-align: center;
     }
 
     #counterRounds {
         display: none;
-        padding: 13.5px 0;
+        margin: 10px 0 31px 0;
     }
 
-    input[type="radio"]:checked + label, input[type="radio"]:hover + label {
-        background-color: orange;
-        color: white;
-    }
+    #formRounds {
+        margin-bottom: 20px;
 
-    label {
-        background-color: white;
-        color: orange;    
+        input[type="radio"] {
+            visibility: hidden;
+        }
+
+        label {
+            position: relative; /* Added */
+            display: inline-block; /* Added */
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            padding: 10px 15px; /* Increased left padding */
+            color: #05408e;
+            font-size: 1.3rem;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Added */
+        label::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            background-color: #f3eadb;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        input[type="radio"]:checked + label::before,
+        input[type="radio"]:hover + label::before {
+            background-color: #05408e;
+        }
+
+        input[type="radio"]:checked + label,
+        input[type="radio"]:hover + label {
+            color: #f3eadb;
+        }
     }
 }
 
 #sectionCounter {
-    border: 3px solid white;
-    border-radius: 5px;
+    background-image: url("../img/number-guessing-game-c-project-Thumbnail.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25vh;
     padding: 2vh 5vw;
     margin-bottom: 3vh;
     text-align: center;
     position: relative;
 
+
     h2 {
-        font-size: 2rem;
+        padding: 16% 0 0 9%;
+        font-size: 3rem;
+        letter-spacing: 2.1rem;
     }
 
     p {
         position: absolute;
-        background-color: orange;
+        background-color: #05408e;
+        color: white;
         padding: 10px 20px;
         border-radius: 10px;
     }
 
     p:first-of-type {
-        top: 25%;
-        left: -40px;
+        top: 52%;
+        left: 115px;
     }
 
     p:nth-of-type(2) {
-        top: 25%;
-        right: -40px;
+        top: 52%;
+        right: 115px;
     }
 }
 
-input[type="radio"]{
+input[type="radio"] {
     visibility: hidden;
     height: 0;
     width: 0;
@@ -103,23 +152,27 @@ label {
     text-align: center;
     margin: 0 auto;
 
-    input[type="radio"]:checked + label, input[type="radio"]:hover + label {
+    p {
+        margin-bottom: 3vh;
+    }
+
+    input[type="radio"]:checked + label,
+    input[type="radio"]:hover + label {
         box-shadow: 0px 0px 5px 0px white;
     }
-    
+
     img {
         width: 50px;
         margin-bottom: 1vh;
     }
 
     label {
-        color: white;
-        border: 3px solid white;
+        border: 1px solid #05408e;
     }
 
     article {
         grid-template-columns: repeat(3, 33%);
-        margin: 5vh 0;
+        margin: 5vh 10vw;
         font-family: Ubuntu;
         display: none;
 
@@ -142,18 +195,10 @@ label {
 }
 
 #restart {
-    color: white;
     text-decoration: none;
-    border: 1px solid white;
+    border: 1px solid #05408e;
+    color: #05408e;
     border-radius: 5px;
     padding: 1vh 3vw;
     display: none;
 }
-
-
-
-
-
-
-
-

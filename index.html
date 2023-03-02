@@ -9,8 +9,10 @@
 </head>
 <body>
     <main>
+        <h1>Play Rock Paper Scissors!</h1>
+
         <section id="sectionRounds">
-            <p>How many rounds do you want to play?</p>
+            <p id="numRounds">No. of rounds</p>
             <h2 id="counterRounds"></h2>
 
             <form id="formRounds">
@@ -27,11 +29,13 @@
 
         <section id="sectionCounter">
             <p>YOU</p>
-            <h2 id="score">0 : 0</h2>
+            <h2 id="score">00</h2>
             <p>COM</p>
         </section>
 
         <section id="sectionPlay">
+            <p id="hintText">First you need to select the amount of rounds, then make your fist move!</p>
+
             <form id="formChoice">
                 <input type="radio" name="choice" id="rock" value="rock">
                 <label for="rock">Rock</label>
@@ -40,8 +44,6 @@
                 <input type="radio" name="choice" id="scissors" value="scissors">
                 <label for="scissors">Scissors</label>
             </form>
-
-            <p id="hintText">First you need to select the amount of rounds, then make your fist move!</p>
 
             <article>
                 <h2 id="result"></h2>
