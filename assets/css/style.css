@@ -16,17 +16,17 @@ body {
 }
 
 main {
-  width: 40vw;
-  margin: 5vh auto;
+  padding: 5vh 5vw;
+  margin: auto;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #05408e;
 }
 main h1 {
   background-color: #fdffff;
-  padding: 10px 40px;
+  padding: 1.5% 10%;
   border: 1px solid #05408e;
   border-radius: 30px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: max-content;
   margin: auto;
 }
@@ -35,15 +35,15 @@ main h1 {
   text-align: center;
 }
 #sectionRounds p {
-  margin: 25px;
+  margin: 5vh;
   text-align: center;
 }
 #sectionRounds #counterRounds {
   display: none;
-  margin: 10px 0 31px 0;
+  margin: 2vh 0 5vh 0;
 }
 #sectionRounds #formRounds {
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   /* Added */
 }
 #sectionRounds #formRounds input[type=radio] {
@@ -55,7 +55,6 @@ main h1 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
-  padding: 10px 15px; /* Increased left padding */
   color: #05408e;
   font-size: 1.3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -67,8 +66,8 @@ main h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  width: 50px;
+  height: 50px;
   background-color: #f3eadb;
   border-radius: 50%;
   z-index: -1;
@@ -88,13 +87,16 @@ main h1 {
   background-repeat: no-repeat;
   background-position: center;
   height: 25vh;
+  width: 300px;
   padding: 2vh 5vw;
-  margin-bottom: 3vh;
+  margin: 0 auto 5vh auto;
   text-align: center;
   position: relative;
 }
 #sectionCounter h2 {
-  padding: 16% 0 0 9%;
+  position: absolute;
+  top: 45%;
+  left: 35%;
   font-size: 3rem;
   letter-spacing: 2.1rem;
 }
@@ -107,11 +109,11 @@ main h1 {
 }
 #sectionCounter p:first-of-type {
   top: 52%;
-  left: 115px;
+  left: -5%;
 }
 #sectionCounter p:nth-of-type(2) {
   top: 52%;
-  right: 115px;
+  right: -5%;
 }
 
 input[type=radio] {
@@ -134,11 +136,11 @@ label {
   margin: 0 auto;
 }
 #sectionPlay p {
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
 }
 #sectionPlay input[type=radio]:checked + label,
 #sectionPlay input[type=radio]:hover + label {
-  box-shadow: 0px 0px 5px 0px white;
+  margin-bottom: 3vh;
 }
 #sectionPlay img {
   width: 50px;
