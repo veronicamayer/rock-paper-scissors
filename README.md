@@ -10,7 +10,7 @@ In this fun little game of Rock Paper Scissors you can see an except of my vanil
 
 ## Notes
 - There are no points given for draws, but it still counts as a turn. For example, a 5 round game with 4 draws will only have 1 point in total.
-- This page is not yet optimized for mobile devices. Also, it was developed on a 1440px x 735px screen. If your screen is significantly larger than that the page will probably not look very aligned.
+- This page is not yet optimized for mobile devices. 
 
 ## Deployment
 
