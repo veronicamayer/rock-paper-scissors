@@ -12,51 +12,54 @@
 body {
   background-color: #fff8ed;
   color: white;
-  height: 100vh;
 }
 
 main {
   padding: 5vh 5vw;
-  margin: auto;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #05408e;
 }
 main h1 {
   background-color: #fdffff;
-  padding: 1.5% 10%;
+  padding: 1% 10%;
   border: 1px solid #05408e;
   border-radius: 30px;
   font-size: 1rem;
-  width: max-content;
-  margin: auto;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 5vh;
 }
 
 #sectionRounds {
   text-align: center;
 }
 #sectionRounds p {
-  margin: 5vh;
   text-align: center;
+  margin-bottom: 3vh;
 }
 #sectionRounds #counterRounds {
   display: none;
-  margin: 2vh 0 5vh 0;
+  margin-bottom: 6.6vh;
+  font-size: 1rem;
+}
+#sectionRounds #counterRounds i {
+  margin-left: 10px;
 }
 #sectionRounds #formRounds {
-  margin-bottom: 5%;
+  margin: 0vh 0 5vh 0;
   /* Added */
 }
 #sectionRounds #formRounds input[type=radio] {
   visibility: hidden;
 }
 #sectionRounds #formRounds label {
-  position: relative; /* Added */
-  display: inline-block; /* Added */
+  position: relative;
+  display: inline-block;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   color: #05408e;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #sectionRounds #formRounds label::before {
@@ -66,8 +69,8 @@ main h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #f3eadb;
   border-radius: 50%;
   z-index: -1;
@@ -82,23 +85,27 @@ main h1 {
 }
 
 #sectionCounter {
-  background-image: url("../img/number-guessing-game-c-project-Thumbnail.jpg");
+  background-image: url("../img/counter.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 25vh;
+  height: 150px;
   width: 300px;
-  padding: 2vh 5vw;
   margin: 0 auto 5vh auto;
   text-align: center;
   position: relative;
 }
-#sectionCounter h2 {
+#sectionCounter #scoreUser {
   position: absolute;
   top: 45%;
-  left: 35%;
-  font-size: 3rem;
-  letter-spacing: 2.1rem;
+  left: 37%;
+  font-size: 2.5rem;
+}
+#sectionCounter #scoreCom {
+  position: absolute;
+  top: 45%;
+  left: 55.5%;
+  font-size: 2.5rem;
 }
 #sectionCounter p {
   position: absolute;
@@ -108,27 +115,28 @@ main h1 {
   border-radius: 10px;
 }
 #sectionCounter p:first-of-type {
-  top: 52%;
-  left: -5%;
+  top: 48%;
+  left: 0;
 }
 #sectionCounter p:nth-of-type(2) {
-  top: 52%;
-  right: -5%;
+  top: 48%;
+  right: 0;
 }
 
 input[type=radio] {
   visibility: hidden;
   height: 0;
   width: 0;
-  margin: 3vh 0;
+  margin: 1vh 0;
 }
 
 label {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
-  padding: 8px 25px;
+  padding: 5px 25px;
   border-radius: 10px;
+  font-size: 0.9rem;
 }
 
 #sectionPlay {
@@ -150,8 +158,9 @@ label {
   border: 1px solid #05408e;
 }
 #sectionPlay article {
-  grid-template-columns: repeat(3, 33%);
-  margin: 5vh 10vw;
+  grid-template-columns: repeat(3, 15vw);
+  width: fit-content;
+  margin: 5vh auto 3vh auto;
   font-family: Ubuntu;
   display: none;
 }
@@ -160,22 +169,38 @@ label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2vw;
+}
+#sectionPlay article div img {
+  height: 50%;
+  object-fit: contain;
 }
 #sectionPlay article div p {
-  margin-bottom: 1vh;
+  margin-bottom: 0;
 }
 #sectionPlay article #result {
   grid-column: 1/4;
-  margin-bottom: 3vh;
+  margin-bottom: 0;
+}
+
+#hintText {
+  margin: 3vh 0;
+}
+
+#formChoice {
+  display: none;
 }
 
 #restart {
-  text-decoration: none;
-  border: 1px solid #05408e;
   color: #05408e;
   border-radius: 5px;
-  padding: 1vh 3vw;
+  padding: 5vh 3vw;
   display: none;
+  width: fit-content;
+  margin: auto;
+}
+#restart i {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

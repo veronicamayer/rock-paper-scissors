@@ -1,73 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-    <main>
-        <h1>Play Rock Paper Scissors!</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <script
+            src="https://kit.fontawesome.com/88846001fa.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <main>
+            <h1>Play Rock Paper Scissors!</h1>
 
-        <section id="sectionRounds">
-            <p id="numRounds">No. of rounds</p>
-            <h2 id="counterRounds"></h2>
+            <section id="sectionRounds">
+                <p id="numRounds">No. of rounds</p>
+                <h2 id="counterRounds"></h2>
 
-            <form id="formRounds">
-                <input type="radio" name="numberOfRounds" id="five" value="5"/>
-                <label for="five">5</label>
-                <input type="radio" name="numberOfRounds" id="ten" value="10"/>
-                <label for="ten">10</label>
-                <input type="radio" name="numberOfRounds" id="fifteen" value="15"/>
-                <label for="fifteen">15</label>
-                <input type="radio" name="numberOfRounds" id="twenty" value="20"/>
-                <label for="twenty">20</label>
-            </form>    
-        </section>
+                <form id="formRounds">
+                    <input
+                        type="radio"
+                        name="numberOfRounds"
+                        id="five"
+                        value="5"
+                    />
+                    <label for="five">5</label>
+                    <input
+                        type="radio"
+                        name="numberOfRounds"
+                        id="ten"
+                        value="10"
+                    />
+                    <label for="ten">10</label>
+                    <input
+                        type="radio"
+                        name="numberOfRounds"
+                        id="fifteen"
+                        value="15"
+                    />
+                    <label for="fifteen">15</label>
+                    <input
+                        type="radio"
+                        name="numberOfRounds"
+                        id="twenty"
+                        value="20"
+                    />
+                    <label for="twenty">20</label>
+                </form>
+            </section>
 
-        <section id="sectionCounter">
-            <p>YOU</p>
-            <h2 id="score">00</h2>
-            <p>COM</p>
-        </section>
+            <section id="sectionCounter">
+                <p>YOU</p>
+                <h2 id="scoreUser">0</h2>
+                <h2 id="scoreCom">0</h2>
+                <p>COM</p>
+            </section>
 
-        <section id="sectionPlay">
-            <p id="hintText">First you need to select the amount of rounds, then make your fist move!</p>
+            <section id="sectionPlay">
+                <form id="formChoice">
+                    <input type="radio" name="choice" id="rock" value="rock" />
+                    <label for="rock">Rock</label>
+                    <input
+                        type="radio"
+                        name="choice"
+                        id="paper"
+                        value="paper"
+                    />
+                    <label for="paper">Paper</label>
+                    <input
+                        type="radio"
+                        name="choice"
+                        id="scissors"
+                        value="scissors"
+                    />
+                    <label for="scissors">Scissors</label>
+                </form>
 
-            <form id="formChoice">
-                <input type="radio" name="choice" id="rock" value="rock">
-                <label for="rock">Rock</label>
-                <input type="radio" name="choice" id="paper" value="paper">
-                <label for="paper">Paper</label>
-                <input type="radio" name="choice" id="scissors" value="scissors">
-                <label for="scissors">Scissors</label>
-            </form>
+                <article>
+                    <h2 id="result"></h2>
+                    <div>
+                        <img src="" alt="" id="imageYou" />
+                        <p>You</p>
+                        <p id="userChoice"></p>
+                    </div>
 
-            <article>
-                <h2 id="result"></h2>
-                <div>
-                    <img src="" alt="" id="imageYou">
-                    <p>You</p>
-                    <p id="userChoice"></p>
-                </div>
+                    <div>
+                        <p>VS</p>
+                    </div>
 
-                <div>
-                    <p>VS</p>
-                </div>
+                    <div>
+                        <img src="" alt="" id="imageCom" />
+                        <p>Com</p>
+                        <p id="computerChoice"></p>
+                    </div>
+                </article>
 
-                <div>
-                    <img src="" alt="" id="imageCom">
-                    <p>Com</p>
-                    <p id="computerChoice"></p>
-                </div>
-            </article>
+                <a href="javascript:history.go(0)" id="restart"
+                    ><i class="fa-solid fa-rotate-right"></i>restart</a
+                >
+                <p id="hintText">
+                    First you need to select the amount of rounds, then make
+                    your fist move!
+                </p>
+            </section>
+        </main>
 
-            <a href="javascript:history.go(0)" id="restart">restart</a>
-        </section>
-    </main>
-
-    <script src="./assets/js/main.js"></script>
-</body>
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
