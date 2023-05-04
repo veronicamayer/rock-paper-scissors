@@ -2,7 +2,7 @@
   font-family: Ubuntu;
   src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
 }
-/* General styles */
+/* // -------------------------- GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +30,7 @@ main h1 {
   margin-bottom: 5vh;
 }
 
+/* // -------------------------- HOW MANY ROUNDS DO YOU WANT TO PLAY? */
 #sectionRounds {
   text-align: center;
 }
@@ -38,6 +39,7 @@ main h1 {
   margin-bottom: 3vh;
 }
 #sectionRounds #counterRounds {
+  /* counting the already played rounds */
   display: none;
   margin-bottom: 6.6vh;
   font-size: 1rem;
@@ -46,11 +48,8 @@ main h1 {
   margin-left: 10px;
 }
 #sectionRounds #formRounds {
+  /* select the number of rounds */
   margin: 0vh 0 5vh 0;
-  /* Added */
-}
-#sectionRounds #formRounds input[type=radio] {
-  visibility: hidden;
 }
 #sectionRounds #formRounds label {
   position: relative;
@@ -84,6 +83,7 @@ main h1 {
   color: #f3eadb;
 }
 
+/* // -------------------------- SCORE BOARD */
 #sectionCounter {
   background-image: url("../img/counter.jpg");
   background-size: contain;
@@ -115,14 +115,17 @@ main h1 {
   border-radius: 10px;
 }
 #sectionCounter p:first-of-type {
+  /* YOU */
   top: 48%;
   left: 0;
 }
 #sectionCounter p:nth-of-type(2) {
+  /* COM */
   top: 48%;
   right: 0;
 }
 
+/* // -------------------------- BOTH THE NUMBER-OF-ROUNDS-BUTTONS AND THE ROCK-PAPER-SCISSORS-BUTTONS */
 input[type=radio] {
   visibility: hidden;
   height: 0;
@@ -139,9 +142,14 @@ label {
   font-size: 0.9rem;
 }
 
+/* // -------------------------- SELECT ROCK, PAPER, SCISSORS + RESULT */
 #sectionPlay {
   text-align: center;
   margin: 0 auto;
+}
+#sectionPlay #formChoice {
+  /* the buttons to select your choice are not visible until the number of rounds is chosen */
+  display: none;
 }
 #sectionPlay p {
   margin-bottom: 5vh;
@@ -158,6 +166,7 @@ label {
   border: 1px solid #05408e;
 }
 #sectionPlay article {
+  /* result user vs. result com */
   grid-template-columns: repeat(3, 15vw);
   width: fit-content;
   margin: 5vh auto 3vh auto;
@@ -182,16 +191,7 @@ label {
   grid-column: 1/4;
   margin-bottom: 0;
 }
-
-#hintText {
-  margin: 3vh 0;
-}
-
-#formChoice {
-  display: none;
-}
-
-#restart {
+#sectionPlay #restart {
   color: #05408e;
   border-radius: 5px;
   padding: 5vh 3vw;
@@ -199,8 +199,11 @@ label {
   width: fit-content;
   margin: auto;
 }
-#restart i {
+#sectionPlay #restart i {
   margin-right: 10px;
+}
+#sectionPlay #hintText {
+  margin: 3vh 0;
 }
 
 /*# sourceMappingURL=style.css.map */

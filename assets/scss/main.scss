@@ -1,12 +1,9 @@
-@use "mixins.scss";
-@use "variables.scss";
-
 @font-face {
     font-family: Ubuntu;
     src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
 }
 
-/* General styles */
+/* // -------------------------- GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +32,7 @@ main {
         margin-bottom: 5vh;
     }
 }
-
+/* // -------------------------- HOW MANY ROUNDS DO YOU WANT TO PLAY? */
 #sectionRounds {
     text-align: center;
 
@@ -45,6 +42,7 @@ main {
     }
 
     #counterRounds {
+        /* counting the already played rounds */
         display: none;
         margin-bottom: 6.6vh;
         font-size: 1rem;
@@ -55,11 +53,8 @@ main {
     }
 
     #formRounds {
+        /* select the number of rounds */
         margin: 0vh 0 5vh 0;
-
-        input[type="radio"] {
-            visibility: hidden;
-        }
 
         label {
             position: relative;
@@ -72,7 +67,6 @@ main {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Added */
         label::before {
             content: "";
             display: block;
@@ -99,6 +93,7 @@ main {
     }
 }
 
+/* // -------------------------- SCORE BOARD */
 #sectionCounter {
     background-image: url("../img/counter.jpg");
     background-size: contain;
@@ -133,16 +128,19 @@ main {
     }
 
     p:first-of-type {
+        /* YOU */
         top: 48%;
         left: 0;
     }
 
     p:nth-of-type(2) {
+        /* COM */
         top: 48%;
         right: 0;
     }
 }
 
+/* // -------------------------- BOTH THE NUMBER-OF-ROUNDS-BUTTONS AND THE ROCK-PAPER-SCISSORS-BUTTONS */
 input[type="radio"] {
     visibility: hidden;
     height: 0;
@@ -159,9 +157,15 @@ label {
     font-size: 0.9rem;
 }
 
+/* // -------------------------- SELECT ROCK, PAPER, SCISSORS + RESULT */
 #sectionPlay {
     text-align: center;
     margin: 0 auto;
+
+    #formChoice {
+        /* the buttons to select your choice are not visible until the number of rounds is chosen */
+        display: none;
+    }
 
     p {
         margin-bottom: 5vh;
@@ -182,6 +186,7 @@ label {
     }
 
     article {
+        /* result user vs. result com */
         grid-template-columns: repeat(3, 15vw);
         width: fit-content;
         margin: 5vh auto 3vh auto;
@@ -210,25 +215,21 @@ label {
             margin-bottom: 0;
         }
     }
-}
 
-#hintText {
-    margin: 3vh 0;
-}
+    #restart {
+        color: #05408e;
+        border-radius: 5px;
+        padding: 5vh 3vw;
+        display: none;
+        width: fit-content;
+        margin: auto;
 
-#formChoice {
-    display: none;
-}
+        i {
+            margin-right: 10px;
+        }
+    }
 
-#restart {
-    color: #05408e;
-    border-radius: 5px;
-    padding: 5vh 3vw;
-    display: none;
-    width: fit-content;
-    margin: auto;
-
-    i {
-        margin-right: 10px;
+    #hintText {
+        margin: 3vh 0;
     }
 }
